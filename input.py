@@ -5,13 +5,13 @@ print str(today)
 
 
 def write_file(week, date, hours, u_hours, b_hours, gen_act):
-    with open("test4.html") as inf:
+    with open("output.html") as inf:
         txt = inf.read()
         txt += '\r\n'
         new_entry = '<tr> \r\n  <td>{4}</td>\r\n <td>{0}</td>\r\n <td>{1}</td>\r\n <td>{2}</td>\r\n <td>{3}</td>\r\n ' \
                     '</tr>\r\n'.format(date, hours, u_hours, gen_act, week)
         txt += new_entry
-        with open("test4.html", "w") as outf:
+        with open("output.html", "w") as outf:
             outf.write(txt)
 
 
