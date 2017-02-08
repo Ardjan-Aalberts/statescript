@@ -15,17 +15,6 @@ def play_sound():
 play_sound()
 
 
-def meta_data():
-    f = open('logs.txt', 'a')
-    f.write('This terminal keeps records off your activities.' + '\n'
-            + 'Made by S0lid' + '\n'
-            + 'By using this software you agree to buy the owner of this application at least five beer.' + '\n'
-            + '+------------------------------------------------------------------------------+' + '\n')
-    f.close()
-
-meta_data()
-
-
 def write_file(now, activity):
     f = open('logs.txt', 'a')
     f.write('Time: ' + now + ', Activity: ' + activity + '\n')
