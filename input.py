@@ -38,6 +38,16 @@ def count_entries():
         txt = inf.read()
         soup = BeautifulSoup.BeautifulSoup(txt)
         return len(soup.findAll('tr'))
+
+
+def check_file():
+    max_entries = (standard_count_tr_tags + 5)
+    c = count_entries()
+    if c >= max_entries:
+        print 'You have your previous file filled out for one week, I\'ll create a new one'
+
+    print 'Entries: {0}'.format(c)
+    print 'Weekly entries: {'
 print count_entries()
 
 user_activity()
