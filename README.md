@@ -8,3 +8,5 @@ application makes that a lot easier.
 To use this application, first execute config.py. This will make the files and submit 
 all the necessary meta-data. After that you can execute hours.py and input.py. In hours.py 
 you can manage your hours, and input.py will ask you what you are doing every thirty minutes.
+
+You need:  html5lib
