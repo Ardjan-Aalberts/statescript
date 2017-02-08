@@ -1,7 +1,16 @@
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    font-family: Arial;
 }
 table{
     width: 100%;
+}
+
+.heading{
+    background-color: lightblue;
+}
+
+.title{
+    color: saddlebrown;
 }
