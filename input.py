@@ -1,7 +1,12 @@
 import datetime
 
+import BeautifulSoup
+
 today = datetime.date.today()
 print str(today)
+
+standard_count_tr_tags = 4
+every_new_entry_tr_tags = 1
 
 
 def write_file(week, date, hours, u_hours, b_hours, gen_act):
@@ -26,5 +31,13 @@ def user_activity():
     if not date:
         date = str(today)
     write_file(week, date, hours, u_hours, b_hours, gen_act)
+
+
+def count_entries():
+    with open("output.html") as inf:
+        txt = inf.read()
+        soup = BeautifulSoup.BeautifulSoup(txt)
+        return len(soup.findAll('tr'))
+print count_entries()
 
 user_activity()
