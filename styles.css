@@ -6,10 +6,13 @@ table, th, td {
 table{
     width: 100%;
 }
-th {
+.heading {
     background-color: #C0C0C0;
 }
 .title{
     color: black;
 }
 
+.tablehead{
+    background-color: #eee;
+}
