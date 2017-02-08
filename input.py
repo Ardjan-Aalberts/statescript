@@ -5,11 +5,11 @@ import BeautifulSoup
 today = datetime.date.today()
 print str(today)
 
-standard_count_tr_tags = 4
+standard_count_tr_tags = 3
 every_new_entry_tr_tags = 1
 
 
-def write_file(week, date, hours, u_hours, b_hours, gen_act):
+def write_file(week, date, hours, u_hours, gen_act):
     with open("output.html") as inf:
         txt = inf.read()
         txt += '\r\n'
@@ -23,14 +23,17 @@ def write_file(week, date, hours, u_hours, b_hours, gen_act):
 def user_activity():
     week = raw_input('Week:')
     date = raw_input('Datum: (leave empty if it is ' + str(today) + ')')
-    hours = raw_input('Gemaakte uren:')
-    u_hours = raw_input('Onbegeleide uren:')
-    b_hours = raw_input('Begeleide uren:')
+    hours = raw_input('Gemaakte uren (leave empty if it is 8):')
+    b_hours = raw_input('PvB uren (leave empty if it is 2):')
     gen_act = raw_input('Algemene activiteit:')
 
     if not date:
         date = str(today)
-    write_file(week, date, hours, u_hours, b_hours, gen_act)
+    if not hours:
+        hours = 8
+    if not b_hours:
+        b_hours = 2
+    write_file(week, date, hours, b_hours, gen_act)
 
 
 def count_entries():
@@ -47,7 +50,6 @@ def check_file():
         print 'You have your previous file filled out for one week, I\'ll create a new one'
 
     print 'Entries: {0}'.format(c)
-    print 'Weekly entries: {'
-print count_entries()
 
+check_file()
 user_activity()
