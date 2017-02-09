@@ -9,4 +9,5 @@ To use this application, first execute config.py. This will make the files and s
 all the necessary meta-data. After that you can execute hours.py and input.py. In hours.py 
 you can manage your hours, and input.py will ask you what you are doing every thirty minutes.
 
-You need:  html5lib
+You need:  html5lib, sudo apt-get install wkhtmltopdf
+

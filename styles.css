@@ -16,3 +16,7 @@ table{
 .tablehead{
     background-color: #eee;
 }
+.ending {
+    background-color: #C0C0C0;
+    border: 0 white !important;
+}
