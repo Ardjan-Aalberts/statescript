@@ -1,13 +1,16 @@
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #3c3c3c !important;
     border-collapse: collapse;
     font-family: Arial;
 }
 table{
     width: 100%;
+    margin-bottom: 0 !important;
 }
+
 .heading {
     background-color: #C0C0C0;
+    border-style: none;
 }
 .title{
     color: black;
@@ -15,8 +18,4 @@ table{
 
 .tablehead{
     background-color: #eee;
-}
-.ending {
-    background-color: #C0C0C0;
-    border: 0 white !important;
 }

@@ -132,7 +132,9 @@ def add_total_hours_bar():
     with open("output.html") as inf:
         txt = inf.read()
         txt += '\r\n'
-        new_entry = '</table><table><tr class="ending"><th class="ending">Total: {0} </th></tr></table>'.format(hours)
+        new_entry = '</table><table><tr class="table table-bordered">' \
+                    '<th class="heading">Totaal aantal gewerkt uren: {0} ' \
+                    '</th></tr></table>'.format(hours)
         txt += new_entry
         with open("output.html", "w") as outf:
             outf.write(txt)
